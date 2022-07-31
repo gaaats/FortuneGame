@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg_game_volf"
+    tools:context=".GreedyWolfGameFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horiszontal_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horiszontal_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vet_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/game_volf_logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_game_volf"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_80"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_20"
+        app:layout_constraintTop_toTopOf="" />
+
+    <ImageView
+        android:id="@+id/game_1_img_quit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_close_btn"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_top_10"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_end_80"
+        app:layout_constraintTop_toTopOf="@id/guideline_top_5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_play"
+        style="@style/text_game_wolf_style"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/tv_custom"
+        android:gravity="center"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="@string/play"
+        android:textSize="25sp"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_60"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_40"
+        app:layout_constraintTop_toTopOf="@id/guideline_82" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_win_count"
+        style="@style/text_game_wolf_style"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/tv_counts_game_1_custom"
+        android:gravity="center"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_play"
+        app:layout_constraintDimensionRatio="1,3"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
+        app:layout_constraintTop_toTopOf="@id/tv_play"
+        tools:text="5658" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_balance_count"
+        style="@style/text_game_wolf_style"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/tv_counts_game_1_custom"
+        android:gravity="center"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_play"
+        app:layout_constraintDimensionRatio="1,3"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/tv_play"
+        tools:text="5658" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_game_1_balance_name"
+        style="@style/text_game_wolf_style"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/balance"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_30"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_15"
+        app:layout_constraintTop_toTopOf="@id/guideline_82" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_game_1_win_name"
+        style="@style/text_game_wolf_style"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/win"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vet_70"
+        app:layout_constraintTop_toTopOf="@id/guideline_82" />
+
+    <LinearLayout
+        android:id="@+id/lin_lay_tool_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/group_game_1_on_top"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="8"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_30"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_20">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_plus_game_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:src="@drawable/plus__"
+            android:text="@string/plus"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/line_sparete_game_1_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="22dp"
+            android:src="@drawable/line_sep" />
+
+        <LinearLayout
+            android:id="@+id/lin_lay_inner"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+
+            <TextView
+                android:id="@+id/tv_user_bet_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/jost_bold"
+                android:gravity="center"
+                android:text="@string/bet"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_user_bet_count"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/jost_bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                tools:text="255" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line_sparete_game_1_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingEnd="22dp"
+            android:src="@drawable/line_sep" />
+
+
+        <ImageButton
+            android:id="@+id/btn_minus_game_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/minus__"
+            android:text="@string/minus"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin_lay_game"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/group_game_1_on_top"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="9"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_78"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_35">
+
+        <LinearLayout
+            android:id="@+id/lin_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/img_left_top"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_left_center"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_left_bottom"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@color/light_green"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_green" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/lin_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_center_top"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_center_center"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_center_bottom"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_right"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@color/light_green"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_green" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/lin_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_right_top"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_right_center"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+            <ImageView
+                android:id="@+id/img_right_bottom"
+                style="@style/element_slot_machine_style"
+                tools:src="@drawable/symbol_1game_wolf" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

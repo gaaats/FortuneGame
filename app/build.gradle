@@ -1,12 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
     compileSdk 32
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.example.fortunegame"
         minSdk 26
         targetSdk 32
@@ -16,18 +22,42 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//    }
     buildTypes {
+//        debug {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles(
+//                    getDefaultProguardFile("proguard-android-optimize.txt"),
+//                    "proguard-rules.pro"
+//            )
+//        }
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
         }
     }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -37,7 +67,47 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.6'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Optional - APIs for SplashScreen, including compatiblity helpers on devices prior Android 12
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    //OneSignal
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    //appsflyer
+    implementation 'com.appsflyer:af-android-sdk:6.8.0'
+
+    //play-services
+    implementation "com.google.android.gms:play-services-ads-identifier:18.0.1"
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.0'
+
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:14.1.0'
+
+    //ads
+    implementation 'androidx.ads:ads-identifier:1.0.0-alpha04'
+
+    //multidex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
+
+}
+kapt {
+    correctErrorTypes = true
 }

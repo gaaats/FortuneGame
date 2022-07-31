@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">FortuneGame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading...</string>
+    <string name="settings">SETTINGS</string>
+    <string name="greedy_wolf">Greedy wolf</string>
+    <string name="magic_momey_maze">Magic momey maze</string>
+    <string name="wheel_of_fortune">Wheel of fortune
+    </string>
+    <string name="terms_and_conditions">
+
+             Terms and Conditions
+    </string>
+    <string name="play">play</string>
+    <string name="balance">balance:</string>
+    <string name="win">win:</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="bet">bet:</string>
 </resources>

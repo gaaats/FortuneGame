@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_nav"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.fortunegame.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_menu_start" >
+        <action
+            android:id="@+id/action_startFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_greedy_wolf_game_fragment"
+            app:destination="@id/greedy_wolf_game_fragment" />
+        <action
+            android:id="@+id/action_startFragment_to_magicMoneyFragment"
+            app:destination="@id/magicMoneyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.fortunegame.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/greedy_wolf_game_fragment"
+        android:name="com.example.fortunegame.Greedy_wolf_game_fragment"
+        android:label="fragment_greedy_wolf_game_fragment"
+        tools:layout="@layout/fragment_greedy_wolf_game_fragment" >
+        <action
+            android:id="@+id/action_greedy_wolf_game_fragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/magicMoneyFragment"
+        android:name="com.example.fortunegame.MagicMoneyFragment"
+        android:label="fragment_magic_money"
+        tools:layout="@layout/fragment_magic_money" >
+        <action
+            android:id="@+id/action_magicMoneyFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+</navigation>
