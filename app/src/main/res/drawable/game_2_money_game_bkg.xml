@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/game_money_main_bkg_color_2" android:endColor="@color/game_money_main_bkg_color_1" android:type="linear" android:angle="90"/>
+
+    <corners android:radius="40dp" />
+    <stroke android:width="2dp"
+        android:color="@color/toolbar_game_money_bkg2"/>
+</shape>

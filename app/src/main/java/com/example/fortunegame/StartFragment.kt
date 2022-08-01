@@ -33,6 +33,9 @@ class StartFragment : Fragment() {
         binding.imgVolf.setOnClickListener {
             findNavController().navigate(R.id.action_startFragment_to_greedy_wolf_game_fragment)
         }
+        binding.imgDolar.setOnClickListener {
+            findNavController().navigate(R.id.action_startFragment_to_magicMoneyFragment)
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 

@@ -15,6 +15,20 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -195,6 +209,7 @@
         style="@style/text_game_style"
         android:id="@+id/tv_title_volf_game"
         android:text="@string/greedy_wolf"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_54"
         app:layout_constraintEnd_toEndOf="@id/guideline_start_45"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@id/guideline_51"/>
@@ -203,7 +218,9 @@
         style="@style/text_game_style"
         android:id="@+id/tv_title_magic_money_game"
         android:text="@string/magic_momey_maze"
+        android:gravity="top"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_54"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_55"
         app:layout_constraintTop_toTopOf="@id/guideline_51"/>
 
@@ -211,6 +228,7 @@
         style="@style/text_game_style"
         android:id="@+id/tv_title_vheel_of_fortune_game"
         android:text="@string/wheel_of_fortune"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_89"
         app:layout_constraintEnd_toEndOf="@id/guideline_start_45"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@id/guideline_86"/>
@@ -218,7 +236,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/text_game_style"
         android:id="@+id/tv_title_soon_game"
-        android:text="@string/wheel_of_fortune"
+        android:text="@string/tropical_tiki"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_89"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_55"
         app:layout_constraintTop_toTopOf="@id/guideline_86"/>
