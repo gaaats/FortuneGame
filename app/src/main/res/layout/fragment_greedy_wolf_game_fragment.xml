@@ -305,6 +305,22 @@
         app:layout_constraintStart_toStartOf="@id/guideline_vert_35"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 
+    <FrameLayout
+        android:layout_width="80dp"
+        android:id="@+id/frame_container"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@id/lin_lay_game"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_40"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_15">
+
+        <ImageView
+            android:id="@+id/img_top_top"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/symbol_5game_1" />
+    </FrameLayout>
+
+
     <LinearLayout
         android:id="@+id/lin_lay_inner"
         android:layout_width="0dp"
@@ -388,14 +404,14 @@
 
             <ImageView
                 android:id="@+id/img_left_top"
-                android:layout_weight="1"
                 style="@style/element_slot_machine_style"
+                android:layout_weight="1"
                 android:src="@drawable/symbol_1game_wolf" />
 
             <ImageView
                 android:id="@+id/img_left_center"
-                android:layout_weight="1"
                 style="@style/element_slot_machine_style"
+                android:layout_weight="1"
                 android:src="@drawable/symbol_2game_1" />
 
             <ImageView

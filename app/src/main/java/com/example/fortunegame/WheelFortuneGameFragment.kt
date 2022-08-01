@@ -94,5 +94,4 @@ class WheelFortuneFameFragment : Fragment() {
             sectorDegrees[i] = (i + 1) * singleSectorDegree
         }
     }
-
 }

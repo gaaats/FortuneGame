@@ -1,40 +1,73 @@
 package com.example.fortunegame
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.fortunegame.databinding.FragmentGreedyWolfGameFragmentBinding
+import com.example.fortunegame.databinding.FragmentWheelFortuneFameBinding
+import kotlinx.coroutines.delay
+import kotlin.random.Random
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Greedy_wolf_game_fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GreedyWolfGameFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private fun getNextRandomelement(): Int {
+        return allElementsSlotMachine[Random.nextInt(allElementsSlotMachine.size)]
     }
+
+    private val allElementsSlotMachine = listOf(
+        R.drawable.symbol_1game_wolf,
+        R.drawable.symbol_2game_1,
+        R.drawable.symbol_3game_1,
+        R.drawable.symbol_4game_1,
+        R.drawable.symbol_5game_1,
+        R.drawable.symbol_6game_1,
+        R.drawable.symbol_7game_1,
+        R.drawable.symbol_8game_1,
+        R.drawable.symbol_9game_1,
+    )
+    val nextElementRandom = getNextRandomelement()
+
+    private var _binding: FragmentGreedyWolfGameFragmentBinding? = null
+    private val binding get() = _binding ?: throw RuntimeException("ActivityMainBinding = null")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_greedy_wolf_game_fragment, container, false)
+    ): View {
+        _binding = FragmentGreedyWolfGameFragmentBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        Log.d("LOOO", "current y ${binding.imgLeftBottom.y}")
+        Log.d("LOOO", "imgLeftBottom isFocusable ${binding.imgLeftBottom.isFocused}")
+
+        binding.btnPlayGame1.setOnClickListener {
+            binding.imgLeftBottom.animate().translationYBy(binding.imgLeftBottom.height.toFloat() ).duration = 300L
+            binding.imgLeftCenter.animate().translationYBy(binding.imgLeftCenter.height.toFloat() ).duration = 300L
+            binding.imgLeftTop.animate().translationYBy(binding.imgLeftTop.height.toFloat() ).duration = 300L
+
+            Log.d("LOOO", "current y ${binding.imgLeftBottom.y}")
+            Log.d("LOOO", "imgLeftBottom isFocusable ${binding.imgLeftBottom.isFocused}")
+
+            binding.frameContainer.animate().translationYBy(binding.frameContainer.height.toFloat() ).duration = 300L
+
+
+        }
+
+
+
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 
 }
