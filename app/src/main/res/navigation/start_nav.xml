@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_startFragment_to_magicMoneyFragment"
             app:destination="@id/magicMoneyFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_wheelFortuneFameFragment"
+            app:destination="@id/wheelFortuneFameFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -27,7 +30,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/greedy_wolf_game_fragment"
-        android:name="com.example.fortunegame.Greedy_wolf_game_fragment"
+        android:name="com.example.fortunegame.GreedyWolfGameFragment"
         android:label="fragment_greedy_wolf_game_fragment"
         tools:layout="@layout/fragment_greedy_wolf_game_fragment" >
         <action
@@ -41,6 +44,15 @@
         tools:layout="@layout/fragment_magic_money" >
         <action
             android:id="@+id/action_magicMoneyFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wheelFortuneFameFragment"
+        android:name="com.example.fortunegame.WheelFortuneFameFragment"
+        android:label="fragment_wheel_fortune_fame"
+        tools:layout="@layout/fragment_wheel_fortune_fame" >
+        <action
+            android:id="@+id/action_wheelFortuneFameFragment_to_startFragment"
             app:destination="@id/startFragment" />
     </fragment>
 </navigation>

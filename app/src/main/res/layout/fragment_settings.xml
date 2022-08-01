@@ -217,7 +217,6 @@
     <CheckBox
         android:id="@+id/check_box_settings_vibro"
         android:text="vibration"
-        android:drawableLeft="@drawable/oval_check_on"
         app:layout_constraintStart_toStartOf="@id/guideline_start_25"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_75"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_35"

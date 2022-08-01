@@ -27,6 +27,12 @@ class StartFragment : Fragment() {
         binding.btnSettings.setOnClickListener {
             findNavController().navigate(R.id.action_startFragment_to_settingsFragment)
         }
+        binding.imgVheel.setOnClickListener {
+            findNavController().navigate(R.id.action_startFragment_to_wheelFortuneFameFragment)
+        }
+        binding.imgVolf.setOnClickListener {
+            findNavController().navigate(R.id.action_startFragment_to_greedy_wolf_game_fragment)
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 
