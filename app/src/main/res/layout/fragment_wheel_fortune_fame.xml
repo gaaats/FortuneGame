@@ -15,6 +15,13 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -200,6 +207,13 @@
         app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -278,14 +292,16 @@
         android:background="@drawable/ic_rectangle_46"
         android:fontFamily="@font/open_sans_bold"
         android:gravity="center"
+        android:maxLines="1"
+        android:lines="1"
         android:padding="4dp"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_25"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_26"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_90"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_70"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_20"
-        tools:text="65565" />
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_19"
+        tools:text="555555" />
 
     <TextView
         android:id="@+id/tv_score_title"
