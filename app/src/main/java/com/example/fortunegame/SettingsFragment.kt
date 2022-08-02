@@ -1,6 +1,7 @@
 package com.example.fortunegame
 
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -21,7 +22,7 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        Log.d("MY_TAG", "it is Fragment onCreateView ")
+        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
@@ -36,52 +37,7 @@ class SettingsFragment : Fragment() {
     }
 
     override fun onDestroy() {
-        Log.d("MY_TAG", "it is Fragment onDestroy ")
         _binding = null
         super.onDestroy()
     }
-
-    override fun onAttach(context: Context) {
-        Log.d("MY_TAG", "it is Fragment onAttach ")
-        super.onAttach(context)
-    }
-
-    
-
-    override fun onDetach() {
-        Log.d("MY_TAG", "it is Fragment onDetach ")
-        super.onDetach()
-    }
-
-    override fun onDestroyView() {
-        Log.d("MY_TAG", "it is Fragment onDestroyView ")
-        super.onDestroyView()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("MY_TAG", "it is Fragment onCreate ")
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onStart() {
-        Log.d("MY_TAG", "it is Fragment onStart ")
-        super.onStart()
-    }
-
-    override fun onResume() {
-        Log.d("MY_TAG", "it is Fragment onResume ")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.d("MY_TAG", "it is Fragment onPause ")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Log.d("MY_TAG", "it is Fragment onStop ")
-        super.onStop()
-    }
-
-
 }

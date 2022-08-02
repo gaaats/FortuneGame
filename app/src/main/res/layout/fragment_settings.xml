@@ -116,7 +116,7 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_start_20"
+        android:id="@+id/guideline_vert_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -130,7 +130,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_80"
+        android:id="@+id/guideline_vert_80_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -144,7 +144,7 @@
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_85"
+        android:id="@+id/guideline_vert_85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -164,16 +164,16 @@
         android:autoSizeTextType="uniform"
         android:text="@string/terms_and_conditions"
         app:layout_constraintBottom_toBottomOf="@id/guideline_btn"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end_80"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_80_"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_start_20" />
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_20" />
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:id="@+id/img_quit"
         android:src="@drawable/ic_close_btn"
-        app:layout_constraintStart_toStartOf="@id/guideline_end_80"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_80_"
         app:layout_constraintBottom_toBottomOf="@id/guideline_top_10"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintTop_toTopOf="@id/guideline_top_5"/>
@@ -215,18 +215,20 @@
         app:layout_constraintStart_toStartOf="@id/guideline_start_25"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_75"/>
     
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/check_box_settings_vibro"
         android:text="vibration"
+        android:button="@drawable/custom_check_box"
         app:layout_constraintStart_toStartOf="@id/guideline_start_25"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_75"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_35"
         android:textColor="@color/white"
         style="@style/text_settings_style"/>
 
-    <CheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/check_box_settings_mode"
         android:text="hard mode"
+        android:button="@drawable/custom_check_box"
         app:layout_constraintStart_toStartOf="@id/guideline_start_25"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_75"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_45"

@@ -122,7 +122,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_80"
+        android:id="@+id/guideline_vert_80_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -218,7 +218,7 @@
         style="@style/text_game_style"
         android:id="@+id/tv_title_magic_money_game"
         android:text="@string/magic_momey_maze"
-        android:gravity="top"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_54"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_55"

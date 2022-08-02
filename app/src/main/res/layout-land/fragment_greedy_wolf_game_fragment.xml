@@ -23,11 +23,6 @@
         app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_hor_79"
-        style="@style/guideline_simple_style_horizontal"
-        app:layout_constraintGuide_percent="0.79" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top_5"
         style="@style/guideline_simple_style_horizontal"
         app:layout_constraintGuide_percent="0.05" />
@@ -46,6 +41,42 @@
         android:id="@+id/guideline_hor_35"
         style="@style/guideline_simple_style_horizontal"
         app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_40"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_45"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_55"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_60"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_65"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_70"
+        style="@style/guideline_simple_style_horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_82"
@@ -78,11 +109,32 @@
         app:layout_constraintGuide_percent="0.30" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vet_70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vet_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start_15"
@@ -97,6 +149,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
@@ -165,8 +224,8 @@
         android:layout_height="0dp"
         android:src="@drawable/logo_game_volf"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_17"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_80_"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_game"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_game"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -174,9 +233,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_close_btn"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_top_10"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_80_"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_17"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_85"
         app:layout_constraintTop_toTopOf="@id/guideline_top_5" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -185,14 +244,13 @@
         android:autoSizeTextType="uniform"
         android:background="@drawable/tv_custom"
         android:gravity="center"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:text="@string/play"
-        app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_60"
-
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_40"
-        app:layout_constraintTop_toTopOf="@id/guideline_80" />
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_70"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_20"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintBottom_toBottomOf="@id/lin_lay_game" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_win_count"
@@ -200,14 +258,13 @@
         android:autoSizeTextType="uniform"
         android:background="@drawable/tv_counts_game_1_custom"
         android:gravity="center"
-        android:text="5658"
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_play_game_1"
+        android:text="5658"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_65"
         app:layout_constraintDimensionRatio="1,2"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
-        app:layout_constraintTop_toTopOf="@id/btn_play_game_1" />
+        app:layout_constraintEnd_toEndOf="@id/btn_play_game_1"
+        app:layout_constraintStart_toStartOf="@id/btn_play_game_1" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_balance_count"
@@ -215,42 +272,40 @@
         android:autoSizeTextType="uniform"
         android:background="@drawable/tv_counts_game_1_custom"
         android:gravity="center"
-        android:text="5658"
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_play_game_1"
+        android:text="5658"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_40"
         app:layout_constraintDimensionRatio="1,2"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toTopOf="@id/btn_play_game_1" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_20"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_game_1_balance_name"
         style="@style/text_game_wolf_style"
         android:layout_height="0dp"
         android:paddingStart="8dp"
-        android:layout_width="0dp"
         android:paddingEnd="8dp"
-        android:layout_marginBottom="2dp"
         android:text="@string/balance"
         app:layout_constraintBottom_toTopOf="@id/tv_balance_count"
         app:layout_constraintEnd_toEndOf="@id/tv_balance_count"
         app:layout_constraintStart_toStartOf="@id/tv_balance_count"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_79" />
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_20" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_game_1_win_name"
         style="@style/text_game_wolf_style"
         android:layout_height="0dp"
         android:gravity="center"
-        android:layout_marginBottom="2dp"
         android:paddingStart="8dp"
+        app:layout_constraintDimensionRatio="1,3"
         android:paddingEnd="8dp"
         android:text="@string/win"
         app:layout_constraintBottom_toTopOf="@id/tv_win_count"
         app:layout_constraintEnd_toEndOf="@id/tv_win_count"
         app:layout_constraintStart_toStartOf="@id/tv_win_count"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_79" />
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_45" />
 
 
     <LinearLayout
@@ -258,11 +313,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/group_game_1_on_top"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_30"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_btn"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_85"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_20" />
 
 
@@ -274,13 +329,12 @@
         android:layout_weight="1"
         android:autoSizeTextType="uniform"
         android:background="?android:attr/selectableItemBackground"
-        android:text="—"
+        android:text="@string/long_minus"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
-        app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar" />
 
     <Button
         android:id="@+id/btn_plus_game_1"
@@ -290,97 +344,73 @@
         android:layout_weight="1"
         android:autoSizeTextType="uniform"
         android:background="?android:attr/selectableItemBackground"
-        android:foregroundGravity="center"
         android:text="@string/plus"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 
     <ImageView
         android:id="@+id/line_separetor_left"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="3dp"
         android:layout_gravity="center"
-        android:layout_weight="1"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:src="@drawable/line_sep"
-        app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_40"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_35"
-        app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
-
-    <FrameLayout
-        android:id="@+id/frame_container"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toTopOf="@id/lin_lay_game"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_40"
-        app:layout_constraintStart_toStartOf="@id/guideline_start_15" />
-
-
-    <LinearLayout
-        android:id="@+id/lin_lay_inner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical"
-        android:weightSum="7"
-        app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_60"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_40"
-        app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-
-        <TextView
-            android:id="@+id/tv_user_bet_title"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="3"
-            android:autoSizeTextType="uniform"
-            android:fontFamily="@font/jost_bold"
-            android:gravity="center"
-            android:text="@string/bet"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/tv_user_bet_count"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:text="255"
-            android:layout_weight="3"
-            android:autoSizeTextType="uniform"
-            android:fontFamily="@font/jost_bold"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rectangle_dark_green"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar"
+        app:layout_constraintTop_toBottomOf="@id/btn_plus_game_1" />
 
     <ImageView
         android:id="@+id/line_separetor_right"
         android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rectangle_dark_green"
+        app:layout_constraintBottom_toTopOf="@id/btn_minus_game_1"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar" />
+
+
+    <TextView
+        android:id="@+id/tv_user_bet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_user_bet_count"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/jost_bold"
+        android:gravity="center"
+        app:layout_constraintDimensionRatio="1,2"
+        android:text="@string/bet"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_user_bet_count"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="1"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:src="@drawable/line_sep"
-        app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_65"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_60"
-        app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/jost_bold"
+        android:gravity="center"
+        app:layout_constraintDimensionRatio="1,2"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:text="252855"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/line_separetor_right"
+        app:layout_constraintEnd_toEndOf="@id/lin_lay_tool_bar"
+        app:layout_constraintStart_toStartOf="@id/lin_lay_tool_bar"
+        app:layout_constraintTop_toBottomOf="@id/line_separetor_left" />
+
 
     <LinearLayout
         android:id="@+id/lin_lay_game"
@@ -390,10 +420,10 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:weightSum="9"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_78"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_35">
+        app:layout_constraintBottom_toBottomOf="@id/guideline_btn"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_80_"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_25"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_17">
 
         <LinearLayout
             android:id="@+id/lin_left"
@@ -417,7 +447,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            android:background="@color/light_green"
+            android:background="@color/dark_green_1"
             app:cardCornerRadius="16dp">
 
             <View
@@ -451,7 +481,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            android:background="@color/light_green"
+            android:background="@color/dark_green_1"
             app:cardCornerRadius="16dp">
 
             <View
@@ -472,10 +502,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rec_v_right"
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
-                tools:listitem="@layout/single_slot_element"
                 android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/single_slot_element" />
 
         </LinearLayout>
 

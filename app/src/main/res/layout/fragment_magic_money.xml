@@ -87,7 +87,7 @@
         app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_start_20"
+        android:id="@+id/guideline_vert_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -122,7 +122,7 @@
         app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_80"
+        android:id="@+id/guideline_vert_80_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -143,7 +143,7 @@
         app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_85"
+        android:id="@+id/guideline_vert_85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -160,7 +160,7 @@
         android:layout_height="0dp"
         android:src="@drawable/game_money_logo"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_17"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end_80"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_80_"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -171,7 +171,7 @@
         android:src="@drawable/ic_close_btn"
         app:layout_constraintBottom_toBottomOf="@id/guideline_top_10"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintStart_toStartOf="@id/guideline_end_80"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_80_"
         app:layout_constraintTop_toTopOf="@id/guideline_top_5" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -269,7 +269,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end_85"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 

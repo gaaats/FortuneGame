@@ -18,4 +18,5 @@
     <string name="your_score">your SCORE:</string>
     <string name="spin">spin</string>
     <string name="tropical_tiki">TROPICAL TIKI</string>
+    <string name="long_minus">—</string>
 </resources>

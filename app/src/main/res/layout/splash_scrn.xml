@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         tools:progress="30"
         android:progressDrawable="@drawable/custom_prog_bar"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end_80"
-        app:layout_constraintStart_toStartOf="@id/guideline_start_20"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_80_"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
         app:layout_constraintTop_toBottomOf="@id/img_logo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -46,7 +46,7 @@
         app:layout_constraintGuide_percent="0.10" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_start_20"
+        android:id="@+id/guideline_vert_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -67,7 +67,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_end_80"
+        android:id="@+id/guideline_vert_80_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

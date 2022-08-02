@@ -14,6 +14,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_44"
@@ -21,6 +28,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_66"
@@ -228,12 +242,13 @@
         android:id="@+id/img_wheel_element_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1,1"
         android:scaleType="centerInside"
         android:src="@drawable/ic_wheel_fin__1_"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_80"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_90"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_10"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_10" />
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_30" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -296,12 +311,10 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_game_fortune_spin"
         style="@style/text_game_fortune_spin_btn_style"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
         android:padding="8dp"
         android:background="@drawable/btn_custom_game_fortune"
         android:text="@string/spin"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_vert_90"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_93"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_75"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_25"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_85" />

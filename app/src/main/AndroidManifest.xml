@@ -24,8 +24,8 @@
         <activity
             android:name=".SupportViewActivity"
             android:exported="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             tools:ignore="ExtraText">
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" >
         </activity>
 
         <activity
@@ -46,7 +46,6 @@
                 <data android:scheme="tlexgn" />
             </intent-filter>
         </activity>
-
 
         <activity
             android:name=".MainActivity"

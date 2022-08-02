@@ -1,6 +1,7 @@
 package com.example.fortunegame
 
 import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -29,6 +30,9 @@ class GreedyWolfGameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+
         _binding = FragmentGreedyWolfGameFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
