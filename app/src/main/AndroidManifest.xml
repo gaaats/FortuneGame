@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.fortunegame" >
+    package="com.example.fortunegame">
 
     <application
         android:name=".MyApp"
@@ -15,7 +15,7 @@
         android:theme="@style/Theme.FortuneGame"
         android:usesCleartextTraffic="true"
         tools:replace="android:fullBackupContent"
-        tools:targetApi="31" >
+        tools:targetApi="31">
 
         <meta-data
             android:name="com.facebook.sdk.AutoInitEnabled"
@@ -23,15 +23,13 @@
 
         <activity
             android:name=".SupportViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:exported="true"
-            tools:ignore="ExtraText" >
-
-            <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" -->
-        </activity>
+            tools:ignore="ExtraText"></activity>
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
