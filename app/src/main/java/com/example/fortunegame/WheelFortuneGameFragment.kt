@@ -35,6 +35,10 @@ class WheelFortuneFameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        // enter user score here according to logic
+        binding.userScoreCount.text = "55"
+
+        initExitBtn()
         getDegreeForSectors()
         binding.btnGameFortuneSpin.setOnClickListener {
             if (!isSpinning) {
@@ -45,6 +49,12 @@ class WheelFortuneFameFragment : Fragment() {
 
 
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun initExitBtn() {
+        binding.btnImgExitVheelGame.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     private fun spin() {

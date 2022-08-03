@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fortunegame.databinding.FragmentGreedyWolfGameFragmentBinding
 import com.example.fortunegame.databinding.SingleSlotElementBinding
@@ -41,6 +42,18 @@ class GreedyWolfGameFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.btnPlusGame1.setOnClickListener {
+            // make add of user BET
+        }
+
+        binding.btnMinusGame1.setOnClickListener {
+            // make reduce of user BET
+        }
+
+        // user BET
+//        binding.tvUserBetCount.text = "5"
+
+        iniExitBtn()
         val linearLayoutManagerLeft = binding.recVLeft.layoutManager as LinearLayoutManager
         val linearLayoutManagerCenter = binding.recVCenter.layoutManager as LinearLayoutManager
         val linearLayoutManagerRight = binding.recVRight.layoutManager as LinearLayoutManager
@@ -50,11 +63,18 @@ class GreedyWolfGameFragment : Fragment() {
         submitListsForRecV()
 
         binding.btnPlayGame1.setOnClickListener {
+            // just change time of each scrolling recViev for better performance
             initScrollingSlotMachine(linearLayoutManagerLeft, 8, 12)
             initScrollingSlotMachine(linearLayoutManagerCenter, 12, 18)
             initScrollingSlotMachine(linearLayoutManagerRight, 20, 27)
         }
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun iniExitBtn() {
+        binding.btnGame1ImgExit.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     override fun onDestroy() {

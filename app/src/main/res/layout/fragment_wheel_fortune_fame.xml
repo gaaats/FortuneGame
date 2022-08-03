@@ -228,7 +228,7 @@
         app:layout_constraintGuide_percent="0.07" />
 
     <ImageView
-        android:id="@+id/img_quit"
+        android:id="@+id/btn_img_exit_vheel_game"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_close_btn"
@@ -285,7 +285,7 @@
 
 
     <TextView
-        android:id="@+id/user_scire_count"
+        android:id="@+id/user_score_count"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeTextType="uniform"

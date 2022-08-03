@@ -229,7 +229,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/game_1_img_quit"
+        android:id="@+id/btn_game_1_img_exit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_close_btn"
@@ -415,7 +415,7 @@
     <LinearLayout
         android:id="@+id/lin_lay_game"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="300dp"
         android:background="@drawable/group_game_1_on_top"
         android:orientation="horizontal"
         android:padding="16dp"

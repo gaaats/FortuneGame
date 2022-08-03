@@ -30,10 +30,14 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("MY_TAG", "it is Fragment onViewCreated ")
-        binding.imgQuit.setOnClickListener {
-
-        }
+        initExitBtn()
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun initExitBtn() {
+        binding.btnImgExitSettings.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     override fun onDestroy() {

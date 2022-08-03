@@ -40,6 +40,19 @@ class MagicMoneyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.btnPlusGame2.setOnClickListener {
+            // make add of user BET
+        }
+
+        binding.btnMinusGame2.setOnClickListener{
+            // make reduce of user BET
+        }
+
+        // user BET
+//        binding.tvUserBetCount.text = "5"
+
+        initExitBtn()
+
         val linearLayoutManagerLeft = binding.recVLeft.layoutManager as LinearLayoutManager
         val linearLayoutManagerCenter = binding.recVCenter.layoutManager as LinearLayoutManager
         val linearLayoutManagerRight = binding.recVRight.layoutManager as LinearLayoutManager
@@ -58,6 +71,11 @@ class MagicMoneyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    private fun initExitBtn() {
+        binding.btnGame1ImgExit.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+    }
 
 
     override fun onDestroy() {

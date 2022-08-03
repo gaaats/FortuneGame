@@ -170,7 +170,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/game_1_img_quit"
+        android:id="@+id/btn_game_1_img_exit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_close_btn"
@@ -267,23 +267,24 @@
 
 
     <Button
-        android:id="@+id/btn_minus_game_1"
+        android:id="@+id/btn_minus_game_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:autoSizeTextType="uniform"
         android:background="?android:attr/selectableItemBackground"
-        android:text="—"
+        android:text="@string/long_minus"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 
+
     <Button
-        android:id="@+id/btn_plus_game_1"
+        android:id="@+id/btn_plus_game_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -295,9 +296,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
+
 
     <ImageView
         android:id="@+id/line_separetor_left"
@@ -385,7 +387,7 @@
     <LinearLayout
         android:id="@+id/lin_lay_game"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="300dp"
         android:background="@drawable/game_2_money_game_bkg"
         android:orientation="horizontal"
         android:padding="16dp"
@@ -437,8 +439,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rec_v_center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="146dp"
+                android:layout_height="388dp"
                 android:layout_gravity="center"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/single_slot_element" />

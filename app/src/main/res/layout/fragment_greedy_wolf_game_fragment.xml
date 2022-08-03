@@ -170,7 +170,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/game_1_img_quit"
+        android:id="@+id/btn_game_1_img_exit"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_close_btn"
@@ -278,9 +278,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
+
 
     <Button
         android:id="@+id/btn_plus_game_1"
@@ -295,8 +296,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/lin_lay_tool_bar"
         app:layout_constraintDimensionRatio="1,1"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_35"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_65"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 
     <ImageView
@@ -382,10 +383,11 @@
         app:layout_constraintStart_toStartOf="@id/guideline_vert_60"
         app:layout_constraintTop_toTopOf="@id/lin_lay_tool_bar" />
 
+
     <LinearLayout
         android:id="@+id/lin_lay_game"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="300dp"
         android:background="@drawable/group_game_1_on_top"
         android:orientation="horizontal"
         android:padding="16dp"
@@ -394,6 +396,8 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="@id/guideline_hor_35">
+
+
 
         <LinearLayout
             android:id="@+id/lin_left"

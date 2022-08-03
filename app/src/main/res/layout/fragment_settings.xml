@@ -171,7 +171,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/img_quit"
+        android:id="@+id/btn_img_exit_settings"
         android:src="@drawable/ic_close_btn"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_80_"
         app:layout_constraintBottom_toBottomOf="@id/guideline_top_10"
