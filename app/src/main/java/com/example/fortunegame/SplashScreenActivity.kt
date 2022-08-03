@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -25,7 +26,6 @@ class SplashScreenActivity : AppCompatActivity() {
         startActivity(Intent(this, SupportViewActivity::class.java).apply {
             putExtra(WZCCA, utfihhea)
         })
-
         finish()
     }
 
@@ -33,7 +33,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Thread {
             Thread.sleep(2000)
             runOnUiThread {
-                //todo
+                //Done
                 // направляем дальше к играм, которые вы написали
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
@@ -46,16 +46,16 @@ class SplashScreenActivity : AppCompatActivity() {
         _binding = SplashScrnBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //delete if you dont need
+        //delete if you don`t need
         initProgBar()
-        Handler(Looper.myLooper()!!).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }, SPLASH_SCREEN_TIME)
+//        Handler(Looper.myLooper()!!).postDelayed({
+//            startActivity(Intent(this, MainActivity::class.java))
+//            finish()
+//        }, SPLASH_SCREEN_TIME)
 
-//        mqvrkdzk = HelpTools(this)
-//
-//        opduv()
+        mqvrkdzk = HelpTools(this)
+
+        opduv()
     }
 
     override fun onDestroy() {
@@ -69,11 +69,14 @@ class SplashScreenActivity : AppCompatActivity() {
                 val utfihhea = mqvrkdzk.opduv()
 
                 if (!utfihhea.isNullOrEmpty()) {
+                    Log.d("MY_TAG", "in opduv !utfihhea.isNullOrEmpty()")
                     nvxadcyg(utfihhea)
                 } else {
+                    Log.d("MY_TAG", "in opduv else - evuzl")
                     evuzl()
                 }
             } catch (e: Exception) {
+                Log.d("MY_TAG", "in catch")
                 e.printStackTrace()
                 rqzzpbnl.launch {
                     initAlertDialog()
@@ -110,41 +113,3 @@ class SplashScreenActivity : AppCompatActivity() {
         }
     }
 }
-
-
-//class SplashScreenActivity : AppCompatActivity() {
-//
-//    private val SPLASH_SCREEN_TIME: Long = 1000
-//    private var _binding: SplashScrnBinding? = null
-//    private val binding get() = _binding ?: throw RuntimeException("ActivityMainBinding = null")
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        _binding = SplashScrnBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        initProgBar()
-////        binding.progBarSplashScrn.setProgress(50)
-//
-//        Handler(Looper.myLooper()!!).postDelayed({
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }, SPLASH_SCREEN_TIME)
-//    }
-//
-//    private fun initProgBar() {
-//        lifecycleScope.launch {
-//            for (progress in 1..100){
-//                withContext(Dispatchers.Main) {
-//                    binding.progBarSplashScrn.progress = progress
-//                }
-//                delay(SPLASH_SCREEN_TIME/125)
-//            }
-//        }
-//    }
-//
-//    override fun onDestroy() {
-//        _binding = null
-//        super.onDestroy()
-//    }
-//}

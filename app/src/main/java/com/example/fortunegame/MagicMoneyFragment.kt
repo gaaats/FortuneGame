@@ -7,17 +7,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fortunegame.databinding.FragmentGreedyWolfGameFragmentBinding
 import com.example.fortunegame.databinding.FragmentMagicMoneyBinding
 import com.example.fortunegame.utils.SlotElement
 import com.example.fortunegame.utils.SlotListAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Singleton
 import kotlin.random.Random
 
+@AndroidEntryPoint
+@Singleton
 class MagicMoneyFragment : Fragment() {
+
+    private val mainViewModel by activityViewModels<MainViewModel>()
 
     private val slotListAdapterLeft = SlotListAdapter()
     private val slotListAdapterCenter = SlotListAdapter()
@@ -25,7 +31,6 @@ class MagicMoneyFragment : Fragment() {
 
     private var _binding: FragmentMagicMoneyBinding? = null
     private val binding get() = _binding ?: throw RuntimeException("ActivityMainBinding = null")
-
 
 
     override fun onCreateView(
@@ -40,16 +45,29 @@ class MagicMoneyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        mainViewModel.currentBetMoneyGame.observe(viewLifecycleOwner) {
+            binding.tvUserBetCount.text = it.toString()
+        }
+
+        mainViewModel.currentWinMoney.observe(viewLifecycleOwner) {
+            binding.tvWinCount.text = it.toString()
+        }
+
+        mainViewModel.currentBalance.observe(viewLifecycleOwner) {
+            binding.tvBalanceCount.text = it.toString()
+        }
+
         binding.btnPlusGame2.setOnClickListener {
-            // make add of user BET
+            if (mainViewModel.currentBetMoneyGame.value!! < 200) {
+                mainViewModel.changeBetMoneyGame(10)
+            }
         }
 
-        binding.btnMinusGame2.setOnClickListener{
-            // make reduce of user BET
+        binding.btnMinusGame2.setOnClickListener {
+            if (mainViewModel.currentBetMoneyGame.value!! > 10) {
+                mainViewModel.changeBetMoneyGame(-10)
+            }
         }
-
-        // user BET
-//        binding.tvUserBetCount.text = "5"
 
         initExitBtn()
 
@@ -84,9 +102,15 @@ class MagicMoneyFragment : Fragment() {
     }
 
     private fun submitListsForRecV() {
-        slotListAdapterLeft.submitList(generateSlotList().shuffled())
-        slotListAdapterRight.submitList(generateSlotList().shuffled())
-        slotListAdapterCenter.submitList(generateSlotList().shuffled())
+        mainViewModel.leftListMoney.observe(viewLifecycleOwner) {
+            slotListAdapterLeft.submitList(it)
+        }
+        mainViewModel.rightListMoney.observe(viewLifecycleOwner) {
+            slotListAdapterRight.submitList(it)
+        }
+        mainViewModel.centerListMoney.observe(viewLifecycleOwner) {
+            slotListAdapterCenter.submitList(it)
+        }
     }
 
     private fun initAdaptersRecV() {
@@ -102,35 +126,6 @@ class MagicMoneyFragment : Fragment() {
         binding.recVCenter.setOnTouchListener { _, _ -> true }
     }
 
-    private fun generateSlotList(): List<SlotElement> {
-        val listOfImages = generateList()
-        val preList = mutableListOf<SlotElement>()
-        for (i in 1..50) {
-            preList.add(
-                SlotElement(
-                    Random.nextInt(Int.MAX_VALUE),
-                    listOfImages.random(),
-                    Random.nextInt(10)
-                )
-            )
-        }
-        return preList
-    }
-
-    private fun generateList(): List<Int> {
-        return listOf(
-            R.drawable.symbol_1_game_money,
-            R.drawable.symbol_2_game_money,
-            R.drawable.symbol_3_game_money,
-            R.drawable.symbol_4_game_money,
-            R.drawable.symbol_5_game_money,
-            R.drawable.symbol_6_game_money,
-            R.drawable.symbol_7_game_money,
-            R.drawable.symbol_8_game_money,
-            R.drawable.symbol_9_game_money,
-        )
-    }
-
     private fun initScrollingSlotMachine(
         linearLayoutManager: LinearLayoutManager,
         minNumberScrolling: Int,
@@ -143,7 +138,14 @@ class MagicMoneyFragment : Fragment() {
                 delay(timeForDelayLeft)
                 timeForDelayLeft += 5
             }
+            if (maxNumberScrolling == 27) {
+                checkResult()
+            }
         }
+    }
+
+    private fun checkResult() {
+        mainViewModel.checkResultMoney()
     }
 
 }

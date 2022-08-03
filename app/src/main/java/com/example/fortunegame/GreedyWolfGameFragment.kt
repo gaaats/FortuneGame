@@ -7,18 +7,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fortunegame.databinding.FragmentGreedyWolfGameFragmentBinding
-import com.example.fortunegame.databinding.SingleSlotElementBinding
-import com.example.fortunegame.utils.SlotElement
 import com.example.fortunegame.utils.SlotListAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Singleton
 import kotlin.random.Random
 
+@AndroidEntryPoint
+@Singleton
 class GreedyWolfGameFragment : Fragment() {
+
+    private val mainViewModel by activityViewModels<MainViewModel>()
 
     private val slotListAdapterLeft = SlotListAdapter()
     private val slotListAdapterCenter = SlotListAdapter()
@@ -42,18 +46,31 @@ class GreedyWolfGameFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        mainViewModel.currentBet.observe(viewLifecycleOwner) {
+            binding.tvUserBetCount.text = it.toString()
+        }
+
+        mainViewModel.currentWinGreedy.observe(viewLifecycleOwner) {
+            binding.tvWinCount.text = it.toString()
+        }
+
+        mainViewModel.currentBalance.observe(viewLifecycleOwner) {
+            binding.tvBalanceCount.text = it.toString()
+        }
+
         binding.btnPlusGame1.setOnClickListener {
-            // make add of user BET
+            if (mainViewModel.currentBet.value!! < 200) {
+                mainViewModel.changeBet(10)
+            }
         }
 
         binding.btnMinusGame1.setOnClickListener {
-            // make reduce of user BET
+            if (mainViewModel.currentBet.value!! > 10) {
+                mainViewModel.changeBet(-10)
+            }
         }
 
-        // user BET
-//        binding.tvUserBetCount.text = "5"
-
-        iniExitBtn()
+        initExitBtn()
         val linearLayoutManagerLeft = binding.recVLeft.layoutManager as LinearLayoutManager
         val linearLayoutManagerCenter = binding.recVCenter.layoutManager as LinearLayoutManager
         val linearLayoutManagerRight = binding.recVRight.layoutManager as LinearLayoutManager
@@ -71,7 +88,7 @@ class GreedyWolfGameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    private fun iniExitBtn() {
+    private fun initExitBtn() {
         binding.btnGame1ImgExit.setOnClickListener {
             requireActivity().onBackPressed()
         }
@@ -83,9 +100,15 @@ class GreedyWolfGameFragment : Fragment() {
     }
 
     private fun submitListsForRecV() {
-        slotListAdapterLeft.submitList(generateSlotList().shuffled())
-        slotListAdapterRight.submitList(generateSlotList().shuffled())
-        slotListAdapterCenter.submitList(generateSlotList().shuffled())
+        mainViewModel.leftList.observe(viewLifecycleOwner) {
+            slotListAdapterLeft.submitList(it)
+        }
+        mainViewModel.rightList.observe(viewLifecycleOwner) {
+            slotListAdapterRight.submitList(it)
+        }
+        mainViewModel.centerList.observe(viewLifecycleOwner) {
+            slotListAdapterCenter.submitList(it)
+        }
     }
 
     private fun initAdaptersRecV() {
@@ -101,47 +124,26 @@ class GreedyWolfGameFragment : Fragment() {
         binding.recVCenter.setOnTouchListener { _, _ -> true }
     }
 
-    private fun generateSlotList(): List<SlotElement> {
-        val listOfImages = generateList()
-        val preList = mutableListOf<SlotElement>()
-        for (i in 1..50) {
-            preList.add(
-                SlotElement(
-                    Random.nextInt(Int.MAX_VALUE),
-                    listOfImages.random(),
-                    Random.nextInt(10)
-                )
-            )
-        }
-        return preList
-    }
-
-    private fun generateList(): List<Int> {
-        return listOf(
-            R.drawable.symbol_1game_wolf,
-            R.drawable.symbol_2game_1,
-            R.drawable.symbol_3game_1,
-            R.drawable.symbol_4game_1,
-            R.drawable.symbol_5game_1,
-            R.drawable.symbol_6game_1,
-            R.drawable.symbol_7game_1,
-            R.drawable.symbol_8game_1,
-            R.drawable.symbol_9game_1,
-        )
-    }
-
     private fun initScrollingSlotMachine(
         linearLayoutManager: LinearLayoutManager,
         minNumberScrolling: Int,
         maxNumberScrolling: Int
     ) {
         lifecycleScope.launch {
+            val numberTop = Random.nextInt(minNumberScrolling, maxNumberScrolling)
             var timeForDelayLeft = 100L
-            for (i in 1..Random.nextInt(minNumberScrolling, maxNumberScrolling)) {
+            for (i in 1..numberTop) {
                 linearLayoutManager.scrollToPositionWithOffset(i, 0)
                 delay(timeForDelayLeft)
                 timeForDelayLeft += 5
             }
+            if (maxNumberScrolling == 27) {
+                checkResult()
+            }
         }
+    }
+
+    private fun checkResult() {
+        mainViewModel.checkResultGreedy()
     }
 }

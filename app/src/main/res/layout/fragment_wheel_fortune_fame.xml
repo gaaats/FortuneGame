@@ -258,7 +258,7 @@
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1,1"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_wheel_fin__1_"
+        android:src="@drawable/ic_wheel_fin____1_"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_80"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_90"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_10"

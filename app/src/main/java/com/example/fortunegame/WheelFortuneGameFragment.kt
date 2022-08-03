@@ -10,12 +10,19 @@ import android.view.animation.DecelerateInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.fortunegame.databinding.FragmentWheelFortuneFameBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Singleton
 import kotlin.random.Random
 
+@AndroidEntryPoint
+@Singleton
 class WheelFortuneFameFragment : Fragment() {
 
-    private val sectors = arrayOf(700, 1000, 100, 200, 500)
+    private val mainViewModel by activityViewModels<MainViewModel>()
+
+    private val sectors = arrayOf(700, 1000, -100, 200, -500)
     private val sectorDegrees = sectors.clone()
     private val singleSectorDegree = 360 / sectors.size
     private var isSpinning = false
@@ -35,8 +42,9 @@ class WheelFortuneFameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        // enter user score here according to logic
-        binding.userScoreCount.text = "55"
+        mainViewModel.currentBalance.observe(viewLifecycleOwner){
+            binding.userScoreCount.text = it.toString()
+        }
 
         initExitBtn()
         getDegreeForSectors()
@@ -46,7 +54,6 @@ class WheelFortuneFameFragment : Fragment() {
                 isSpinning = true
             }
         }
-
 
         super.onViewCreated(view, savedInstanceState)
     }
@@ -82,11 +89,12 @@ class WheelFortuneFameFragment : Fragment() {
                     val userResult = sectors[winnerNumber]
                     Toast.makeText(
                         requireContext(),
-                        "It is $userResult} points",
+                        "$userResult$",
                         Toast.LENGTH_SHORT
                     )
                         .show()
                     isSpinning = false
+                    mainViewModel.changeBalance(userResult)
                 }
                 override fun onAnimationRepeat(p0: Animation?) {
                 }
