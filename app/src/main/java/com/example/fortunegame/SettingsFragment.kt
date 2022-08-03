@@ -1,7 +1,9 @@
 package com.example.fortunegame
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -31,6 +33,12 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("MY_TAG", "it is Fragment onViewCreated ")
         initExitBtn()
+        binding.tvTermsConditions.setOnClickListener {
+            Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(LINK_PRIVACY_POLICY)
+                startActivity(this)
+            }
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -43,5 +51,8 @@ class SettingsFragment : Fragment() {
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+    companion object{
+        private const val LINK_PRIVACY_POLICY = "https://bottulposter.online/agrement"
     }
 }
