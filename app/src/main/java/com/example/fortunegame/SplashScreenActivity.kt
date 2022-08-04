@@ -48,14 +48,14 @@ class SplashScreenActivity : AppCompatActivity() {
 
         //delete if you don`t need
         initProgBar()
-//        Handler(Looper.myLooper()!!).postDelayed({
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }, SPLASH_SCREEN_TIME)
+        Handler(Looper.myLooper()!!).postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }, SPLASH_SCREEN_TIME)
 
-        mqvrkdzk = HelpTools(this)
-
-        opduv()
+//        mqvrkdzk = HelpTools(this)
+//
+//        opduv()
     }
 
     override fun onDestroy() {
